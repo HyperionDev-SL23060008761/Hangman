@@ -1,0 +1,42 @@
+name: Hangman
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [portfolio-hangman]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+
+      - name: Install Required Modules
+        run: |
+          bun install
+
+      - name: Build the Project
+        run: |
+          bun run build
+
+      - name: Restart App
+        run: |
+          #Check if process exists with pm2 pid command
+          if pm2 pid "Hangman" > /dev/null; then
+            echo "Restarting Existing PM2 Process"
+            #Restart the PM2 Process
+            pm2 stop "Hangman"
+            pm2 reset "Hangman"
+            pm2 start "Hangman"
+          else
+            echo "PM2 process 'Hangman' not found. Starting..."
+            #Start the PM2 process if it doesn't exist
+            pm2 start bun "run start" --name "Hangman"
+          fi
