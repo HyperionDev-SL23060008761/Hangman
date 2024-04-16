@@ -32,4 +32,4 @@ jobs:
           pm2 reset "Hangman"
           pm2 start "Hangman"
 
-    #PM2 START COMMAND: pm2 start bun "run start" --name "APP_NAME"
+    #PM2 START COMMAND: pm2 start bun --name "Hangman" -- run live
