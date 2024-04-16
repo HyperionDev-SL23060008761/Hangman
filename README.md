@@ -8,25 +8,32 @@
 
 #### Good luck, Agent!
 
+## Requirements
+
+- Bun v 1.x
+- Node v 20.x
+
 ## Installation
 
 Install the Required Modules (Force is needed due to deprecated depencancies due to the Deprecation of CRA)
 
 ```bash
-  npm install --force
+  bun install
 ```
 
 Build the project
 
 ```bash
-  npm run build
+  bun run build
 ```
 
 Start the Project
 
 ```bash
-  npm run start
+  bun run live
 ```
+
+Open the Site at http://localhost:4000/
 
 ## Support
 
