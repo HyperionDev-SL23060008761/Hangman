@@ -28,15 +28,8 @@ jobs:
 
       - name: Restart App
         run: |
-          #Check if process exists with pm2 pid command
-          if pm2 pid "Hangman" > /dev/null; then
-            echo "Restarting Existing PM2 Process"
-            #Restart the PM2 Process
-            pm2 stop "Hangman"
-            pm2 reset "Hangman"
-            pm2 start "Hangman"
-          else
-            echo "PM2 process 'Hangman' not found. Starting..."
-            #Start the PM2 process if it doesn't exist
-            pm2 start bun "run start" --name "Hangman"
-          fi
+          pm2 stop "Hangman"
+          pm2 reset "Hangman"
+          pm2 start "Hangman"
+
+    #PM2 START COMMAND: pm2 start bun "run start" --name "APP_NAME"
