@@ -208,7 +208,7 @@ export default function HomePage() {
 				<React.Fragment>
 					{/*Setup the Title*/}
 					<h1 className="text-8xl font-bold font-pixelify drop-shadow-[0_0px_5px_#FFFFFFFF] select-none">
-						Hangman
+						Hangman!
 					</h1>
 
 					{/*Setup the Menu*/}
