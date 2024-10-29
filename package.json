@@ -31,7 +31,7 @@
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
-		"live": "bunx serve -s build -p 4000",
+		"live": "bunx serve -s build -p 4002",
 		"start": "bunx react-scripts start",
 		"build": "bunx react-scripts build",
 		"test": "bunx react-scripts test",
