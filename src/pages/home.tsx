@@ -33,7 +33,6 @@ export default function HomePage() {
 	const settingsStore = useSelector((state: DataStore) => state.settings);
 
 	//Setup the Pause Menu Items
-
 	const PauseMenuItems = new Array<MenuItem>();
 
 	//Add the Pause Menu Items to the list
